@@ -14,11 +14,13 @@ class ShoppingCart {
 
   clear() {
     return this.items.length = 0
+    // return this.items = []
   }
 
   clone() {
-    return {...this}
-
+    const cart2 = new ShoppingCart()
+    cart2.items = [...this.items]
+    return cart2
   }
 
 }
